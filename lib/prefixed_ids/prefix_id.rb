@@ -17,14 +17,20 @@ module PrefixedIds
 
     # decode returns an array
     def decode(id, fallback: false)
+      puts "id: #{id}"
       fallback_value = fallback ? id : nil
+      puts "fallback_value: #{fallback_value}"
       _, id_without_prefix = PrefixedIds.split_id(id, @delimiter)
+      puts "id_without_prefix: #{id_without_prefix}"
       decoded_hashid = @hashids.decode_hex(id_without_prefix)
+      puts "decoded_hashid: #{decoded_hashid}"
       if fallback && !valid?(decoded_hashid)
         fallback_value
       else
         # decoded_hashid.last
-        tranform_to_uuid(decoded_hashid.downcase)
+        res = tranform_to_uuid(decoded_hashid.downcase)
+        puts "res: #{res}"
+        res
       end
     end
 
