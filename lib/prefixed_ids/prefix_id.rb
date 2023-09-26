@@ -11,7 +11,7 @@ module PrefixedIds
     end
 
     def encode(id)
-      puts "encode: #{id}"
+      hex_id = id.delete("-")
       @prefix + @delimiter + @hashids.encode_hex("#{TOKEN}#{id}")
     end
 
@@ -23,7 +23,8 @@ module PrefixedIds
       if fallback && !valid?(decoded_hashid)
         fallback_value
       else
-        decoded_hashid.last
+        # decoded_hashid.last
+        tranform_to_uuid(decoded_hashid.downcase)
       end
     end
 
@@ -32,6 +33,10 @@ module PrefixedIds
     def valid?(decoded_hashid)
       # decoded_hashid.size == 2 && decoded_hashid.first == TOKEN
       decoded_hashid[0...TOKEN.size] == TOKEN
+    end
+
+    def tranform_to_uuid(hex_string)
+      "#{hex_string[0,8]}-#{hex_string[8,4]}-#{hex_string[12,4]}-#{hex_string[16,4]}-#{hex_string[20,12]}"
     end
   end
 end
