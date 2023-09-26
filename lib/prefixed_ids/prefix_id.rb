@@ -11,6 +11,7 @@ module PrefixedIds
     end
 
     def encode(id)
+      puts "encode: #{id}"
       @prefix + @delimiter + @hashids.encode_hex("#{TOKEN}#{id}")
     end
 
