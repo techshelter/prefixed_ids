@@ -1,1 +1,0 @@
-["--host=arm64-apple-darwin22.2.0", "--enable-static", "--disable-shared", "--enable-shared=no", "--enable-static=yes", "CC=gcc", "CFLAGS=-fPIC -O2 -fvisibility=hidden", "--prefix=/Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2"]
