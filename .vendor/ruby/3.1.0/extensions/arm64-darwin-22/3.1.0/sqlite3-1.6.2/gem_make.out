@@ -1,0 +1,60 @@
+current directory: /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ext/sqlite3
+/Users/yannakoun/.rvm/rubies/ruby-3.1.2/bin/ruby -I /Users/yannakoun/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0 -r ./siteconf20230926-86040-e4yq9l.rb extconf.rb
+Building sqlite3-ruby using packaged sqlite3.
+Extracting sqlite-autoconf-3410200.tar.gz into tmp/arm64-apple-darwin22.2.0/ports/sqlite3/3.41.2... OK
+Running 'configure' for sqlite3 3.41.2... OK
+Running 'compile' for sqlite3 3.41.2... OK
+Running 'install' for sqlite3 3.41.2... OK
+Activating sqlite3 3.41.2 (from /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2)...
+checking for whether -L/Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/lib is accepted as LDFLAGS... yes
+checking for whether -lsqlite3 is accepted as LDFLAGS... yes
+checking for whether -lz is accepted as LDFLAGS... yes
+checking for whether -fvisibility=hidden is accepted as CFLAGS... yes
+checking for sqlite3.h... yes
+checking for sqlite3_libversion_number() in -lsqlite3... yes
+checking for rb_proc_arity()... yes
+checking for rb_integer_pack()... yes
+checking for sqlite3_initialize()... yes
+checking for sqlite3_backup_init()... yes
+checking for sqlite3_column_database_name()... no
+checking for sqlite3_enable_load_extension()... yes
+checking for sqlite3_load_extension()... yes
+checking for sqlite3_open_v2()... yes
+checking for sqlite3_prepare_v2()... yes
+checking for sqlite3_int64 in sqlite3.h... yes
+checking for sqlite3_uint64 in sqlite3.h... yes
+creating Makefile
+
+current directory: /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ext/sqlite3
+make DESTDIR\= clean
+
+current directory: /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ext/sqlite3
+make DESTDIR\=
+compiling aggregator.c
+compiling backup.c
+compiling database.c
+database.c:130:18: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return INT2NUM((long)sqlite3_total_changes(ctx->db));
+         ~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+database.c:171:67: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  VALUE result = rb_funcall(handle, rb_intern("call"), 1, INT2NUM((long)count));
+                                                          ~~~~~~~ ^~~~~~~~~~~
+database.c:416:18: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return INT2NUM((long)sqlite3_errcode(ctx->db));
+         ~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.
+compiling exception.c
+compiling sqlite3.c
+compiling statement.c
+statement.c:351:18: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return INT2NUM((long)sqlite3_column_count(ctx->st));
+         ~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+statement.c:400:18: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return INT2NUM((long)sqlite3_bind_parameter_count(ctx->st));
+         ~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+linking shared-object sqlite3/sqlite3_native.bundle
+
+current directory: /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ext/sqlite3
+make DESTDIR\= install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 sqlite3_native.bundle ./.gem.20230926-86040-w5g1o5/sqlite3

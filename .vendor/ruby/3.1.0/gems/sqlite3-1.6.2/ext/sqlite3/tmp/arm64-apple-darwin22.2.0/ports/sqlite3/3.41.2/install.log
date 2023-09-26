@@ -1,0 +1,15 @@
+ /opt/homebrew/bin/gmkdir -p '/Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/lib'
+ /bin/sh ./libtool   --mode=install /opt/homebrew/bin/ginstall -c   libsqlite3.la '/Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/lib'
+libtool: install: /opt/homebrew/bin/ginstall -c .libs/libsqlite3.lai /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/lib/libsqlite3.la
+libtool: install: /opt/homebrew/bin/ginstall -c .libs/libsqlite3.a /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/lib/libsqlite3.a
+libtool: install: chmod 644 /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/lib/libsqlite3.a
+libtool: install: ranlib /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/lib/libsqlite3.a
+ /opt/homebrew/bin/gmkdir -p '/Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/bin'
+  /bin/sh ./libtool   --mode=install /opt/homebrew/bin/ginstall -c sqlite3 '/Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/bin'
+libtool: install: /opt/homebrew/bin/ginstall -c sqlite3 /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/bin/sqlite3
+ /opt/homebrew/bin/gmkdir -p '/Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/include'
+ /opt/homebrew/bin/ginstall -c -m 644 sqlite3.h sqlite3ext.h '/Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/include'
+ /opt/homebrew/bin/gmkdir -p '/Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/share/man/man1'
+ /opt/homebrew/bin/ginstall -c -m 644 sqlite3.1 '/Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/share/man/man1'
+ /opt/homebrew/bin/gmkdir -p '/Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/lib/pkgconfig'
+ /opt/homebrew/bin/ginstall -c -m 644 sqlite3.pc '/Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/sqlite3-1.6.2/ports/arm64-apple-darwin22.2.0/sqlite3/3.41.2/lib/pkgconfig'

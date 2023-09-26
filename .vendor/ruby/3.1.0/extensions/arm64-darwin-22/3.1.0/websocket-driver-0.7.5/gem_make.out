@@ -1,0 +1,15 @@
+current directory: /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/yannakoun/.rvm/rubies/ruby-3.1.2/bin/ruby -I /Users/yannakoun/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0 -r ./siteconf20230926-86040-yicekc.rb extconf.rb
+creating Makefile
+
+current directory: /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= clean
+
+current directory: /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\=
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20230926-86040-vszg0g

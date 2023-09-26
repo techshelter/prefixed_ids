@@ -1,0 +1,17 @@
+current directory: /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+/Users/yannakoun/.rvm/rubies/ruby-3.1.2/bin/ruby -I /Users/yannakoun/.rvm/rubies/ruby-3.1.2/lib/ruby/3.1.0 -r ./siteconf20230926-86040-jezonk.rb extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= clean
+
+current directory: /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\=
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/yannakoun/Project/camansa/prefixed_ids/.vendor/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 cparse.bundle ./.gem.20230926-86040-hypade/racc

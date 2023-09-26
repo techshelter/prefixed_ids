@@ -57,15 +57,15 @@ module PrefixedIds
 
     class_methods do
       def find_by_prefix_id(id)
-        find_by(id: _prefix_id.decode_hex(id))
+        find_by(id: _prefix_id.decode(id))
       end
 
       def find_by_prefix_id!(id)
-        find_by!(id: _prefix_id.decode_hex(id))
+        find_by!(id: _prefix_id.decode(id))
       end
 
       def prefix_id(id)
-        _prefix_id.encode_hex(id)
+        _prefix_id.encode(id)
       end
 
       def prefix_ids(ids)
@@ -73,7 +73,7 @@ module PrefixedIds
       end
 
       def decode_prefix_id(id)
-        _prefix_id.decode_hex(id)
+        _prefix_id.decode(id)
       end
 
       def decode_prefix_ids(ids)
@@ -82,7 +82,7 @@ module PrefixedIds
     end
 
     def prefix_id
-      _prefix_id.encode_hex(id)
+      _prefix_id.encode(id)
     end
   end
 
@@ -95,7 +95,7 @@ module PrefixedIds
           # Skip if model doesn't use prefixed ids
           next id unless _prefix_id.present?
 
-          prefix_id = _prefix_id.decode_hex(id, fallback: _prefix_id_fallback)
+          prefix_id = _prefix_id.decode(id, fallback: _prefix_id_fallback)
           raise Error, "#{id} is not a valid prefix_id" if !_prefix_id_fallback && prefix_id.nil?
           prefix_id
         end
@@ -118,7 +118,7 @@ module PrefixedIds
     extend ActiveSupport::Concern
 
     def to_param
-      _prefix_id.encode_hex(id)
+      _prefix_id.encode(id)
     end
   end
 end

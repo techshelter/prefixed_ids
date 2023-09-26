@@ -11,14 +11,14 @@ module PrefixedIds
     end
 
     def encode(id)
-      @prefix + @delimiter + @hashids.encode(TOKEN, id)
+      @prefix + @delimiter + @hashids.encode_hex(TOKEN, id)
     end
 
     # decode returns an array
     def decode(id, fallback: false)
       fallback_value = fallback ? id : nil
       _, id_without_prefix = PrefixedIds.split_id(id, @delimiter)
-      decoded_hashid = @hashids.decode(id_without_prefix)
+      decoded_hashid = @hashids.decode_hex(id_without_prefix)
       if fallback && !valid?(decoded_hashid)
         fallback_value
       else
