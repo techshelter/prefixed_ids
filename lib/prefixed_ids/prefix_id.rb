@@ -12,7 +12,7 @@ module PrefixedIds
 
     def encode(id)
       hex_id = id.delete("-")
-      @prefix + @delimiter + @hashids.encode_hex("#{TOKEN}#{id}")
+      @prefix + @delimiter + @hashids.encode_hex("#{TOKEN}#{hex_id}")
     end
 
     # decode returns an array
