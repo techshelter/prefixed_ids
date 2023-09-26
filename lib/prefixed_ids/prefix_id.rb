@@ -12,7 +12,7 @@ module PrefixedIds
 
     def encode(id)
       hex_id = id.delete("-")
-      @prefix + @delimiter + @hashids.encode_hex("#{TOKEN}#{hex_id}")
+      @prefix + @delimiter + @hashids.encode_hex(hex_id)
     end
 
     # decode returns an array
@@ -38,7 +38,8 @@ module PrefixedIds
 
     def valid?(decoded_hashid)
       # decoded_hashid.size == 2 && decoded_hashid.first == TOKEN
-      decoded_hashid[0...TOKEN.size] == TOKEN
+      # decoded_hashid[0...TOKEN.size] == TOKEN
+      true
     end
 
     def tranform_to_uuid(hex_string)
