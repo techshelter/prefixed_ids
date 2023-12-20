@@ -19,8 +19,8 @@ module PrefixedIds
     def decode(id, fallback: false)
       fallback_value = fallback ? id : nil
       _, id_without_prefix = PrefixedIds.split_id(id, @delimiter)
-      decoded_hashid = @hashids.decode_hex(id_without_prefix)
-      if fallback && !valid?(decoded_hashid)
+      decoded_hashid = @hashids.decode_hex(id_without_prefix) rescue id
+      if fallback && !valid?(decoded_hashid, id)
         fallback_value
       else
         tranform_to_uuid(decoded_hashid.downcase)
@@ -29,10 +29,8 @@ module PrefixedIds
 
     private
 
-    def valid?(decoded_hashid)
-      # decoded_hashid.size == 2 && decoded_hashid.first == TOKEN
-      # decoded_hashid[0...TOKEN.size] == TOKEN
-      true
+    def valid?(decoded_hashid, id)
+      decoded_hashid != id
     end
 
     def tranform_to_uuid(hex_string)
